@@ -1,0 +1,26 @@
+package com.cch.abs_factory;
+
+public class ShapeFactory extends AbstractFactory {
+
+	@Override
+	public Color getColor(String color) {
+		throw new RuntimeException("sorry, I am not have this ability!");
+	}
+
+	@Override
+	public Shape getShape(String shapeType) {
+		if (shapeType == null) {
+			return null;
+		}
+		if (shapeType.equalsIgnoreCase("CIRCLE")) {
+			return new Circle();
+		} else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
+			return new Rectangle();
+		} else if (shapeType.equalsIgnoreCase("SQUARE")) {
+			return new Square();
+		} else {
+			return new BaseShape();
+		}
+	}
+
+}
