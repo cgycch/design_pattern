@@ -9,7 +9,7 @@ public class SynTest {
 
 	public static void method1() {
 		System.out.println("cgycch add method 1");
-		System.out.println("admin update method 1");
+		System.out.println("cgycch update method 1 again");
 	}
 
 	public static void method2() {
