@@ -1,10 +1,16 @@
 package com.cch;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class SynTest {
 
-	public static void main(String[] args) {
-		method2();
-		method1();
+	public static void main(String[] args) throws UnknownHostException {
+		 String name = InetAddress.getLocalHost().getHostName();  
+         System.out.println("your pc name："+name);  
+         
+         String ip = InetAddress.getLocalHost().getHostAddress();         
+         System.out.println("your internet adress："+ip);  
 	}
 
 	public static void method1() {
