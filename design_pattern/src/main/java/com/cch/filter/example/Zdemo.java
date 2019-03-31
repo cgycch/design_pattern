@@ -21,7 +21,7 @@ public class Zdemo {
 		CriteriaFilers<TestBean> myCriterias = new CriteriaFilers<TestBean>();
 		myCriterias.addCriteria(new TestBeanCriteria4Birthday());
 
-		if (!myCriterias.criteriasValidate(data)) {
+		if (!myCriterias.validate(data)) {
 			throw new RuntimeException(myCriterias.getMessage());
 		} else {
 			System.out.println("data is valid");
@@ -32,7 +32,7 @@ public class Zdemo {
 		BaseBean data = generateMockBaseBean();
 		CriteriaFilers<BaseBean> myCriterias = generateFilters();
 
-		if (!myCriterias.criteriasValidate(data)) {
+		if (!myCriterias.validate(data)) {
 			throw new RuntimeException(myCriterias.getMessage());
 		} else {
 			System.out.println("data is valid");

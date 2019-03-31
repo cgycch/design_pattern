@@ -12,7 +12,7 @@ public class CriteriaFilers<T> {
 	private List<Criteria<T>> criteriaLists = new ArrayList<Criteria<T>>();
 	
 	
-	public boolean criteriasValidate(T data) {
+	public boolean validate(T data) {
 		boolean isValid = true;
 		for (Criteria<T> criteria : criteriaLists) {
 			isValid = criteria.checkCriteria(data);
